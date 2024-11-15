@@ -5,23 +5,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import Home from "./components/home";
-import Bentogrid from "./pages/Bentogrid";
+import { Home, Layout } from "./components";
+import { About, Bentogrid } from "./pages";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Home />}>
-        <Route index element={<Bentogrid />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
       </Route>
     )
   );
 
   return (
     <>
-      <RouterProvider router={router}>
-        <Home />
-      </RouterProvider>
+      <RouterProvider router={router} />
     </>
   );
 }

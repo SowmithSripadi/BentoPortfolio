@@ -1,12 +1,15 @@
 import React from "react";
-import { Outlet } from "react-router";
 import NavBar from "./NavBar";
+import { Bentogrid } from "../pages";
 
 function Home() {
   return (
     <>
-      <NavBar />
-      <Outlet />
+      <h1 className="mt-10 lg:text-[50px] text-[60px] cursor-pointer text-center font-Tangerine">
+        Home
+      </h1>
+
+      <Bentogrid />
     </>
   );
 }

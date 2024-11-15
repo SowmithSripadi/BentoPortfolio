@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll; /* Always show the vertical scrollbar */
+}
+
 /* Define default size for grid items */
 .grid-item {
   min-width: 258px;
