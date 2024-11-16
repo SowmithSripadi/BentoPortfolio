@@ -1,4 +1,4 @@
-import Home from "./home";
+import Home from "./Home";
 import NavBar from "./NavBar";
 import Layout from "./Layout";
 import AboutTile from "./BentoTiles/AboutTile";

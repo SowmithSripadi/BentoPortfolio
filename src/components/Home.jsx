@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+
 import { Bentogrid } from "../pages";
 import { motion } from "framer-motion";
 
