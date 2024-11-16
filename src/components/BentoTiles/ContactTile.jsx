@@ -7,10 +7,12 @@ import {
   FaGithub,
   FaGlobe,
 } from "react-icons/fa"; // Example icons from React Icons
+import { motion } from "framer-motion";
+import { itemVariants } from "../../animation/animateVariants";
 
 function ContactTile() {
   return (
-    <div
+    <motion.div
       className="grid-item bg-[#FEEDAE] p-8 cursor-pointer hover:bg-opacity-90 transition duration-300"
       tabIndex="0"
       role="button"
@@ -20,6 +22,7 @@ function ContactTile() {
         }
       }}
       aria-label="Navigate to Contact"
+      variants={itemVariants}
     >
       <p className="font-Tangerine text-2xl tracking-wide mb-4">Contact</p>
 
@@ -61,7 +64,7 @@ function ContactTile() {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

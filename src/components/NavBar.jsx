@@ -1,31 +1,40 @@
+// src/components/NavBar.jsx
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <header>
-      <nav className="flex items-center p-4">
+      <nav className="flex items-center lg:p-4 p-10">
         <div className="ml-auto flex lg:space-x-36 md:space-x-36 mt-10 lg:mr-20 md:mr-20 mr-10 space-x-12">
           <Link
-            to="/section1"
+            to="/about"
             className="cursor-pointer hover:text-gray-500"
-            aria-label="Navigate to Heading 1"
+            aria-label="Navigate to About"
           >
-            Heading 1
+            About
           </Link>
           <Link
-            to="/section2"
+            to="/experience"
             className="cursor-pointer hover:text-gray-500"
-            aria-label="Navigate to Heading 2"
+            aria-label="Navigate to Experience"
           >
-            Heading 2
+            Experience
           </Link>
           <Link
-            to="/section3"
+            to="/projects"
             className="cursor-pointer hover:text-gray-500"
-            aria-label="Navigate to Heading 3"
+            aria-label="Navigate to Projects"
           >
-            Heading 3
+            Projects
+          </Link>
+          <Link
+            to="/"
+            className="cursor-pointer hover:text-gray-500"
+            aria-label="Navigate to Home"
+          >
+            Home
           </Link>
         </div>
       </nav>

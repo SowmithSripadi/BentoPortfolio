@@ -1,5 +1,6 @@
 import React from "react";
-
+import { containerVariants } from "../animation/animateVariants";
+import { motion } from "framer-motion";
 import {
   AboutTile,
   ExperienceTile,
@@ -11,15 +12,20 @@ import {
 
 function Bentogrid() {
   return (
-    <div className="flex justify-center lg:mt-[100px] md:mt-[100px] mt-10">
-      <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-3 lg:gap-[30px] md:gap-[20px] gap-10 max-w-[1000px] max-h-[1000px]">
+    <div className="flex justify-center">
+      <motion.div
+        className="grid lg:grid-cols-3 grid-cols-1 lg:p-0 p-8 md:grid-cols-3 lg:gap-[30px] md:gap-[20px] gap-10 max-w-[1000px] max-h-[1000px]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <AboutTile />
         <ExperienceTile />
         <ImageTile />
         <TechStackTile />
         <ProjectsTile />
         <ContactTile />
-      </div>
+      </motion.div>
     </div>
   );
 }
