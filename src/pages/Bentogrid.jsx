@@ -14,7 +14,7 @@ function Bentogrid() {
   return (
     <div className="flex justify-center">
       <motion.div
-        className="grid lg:grid-cols-3 grid-cols-1 lg:p-0 p-8 md:grid-cols-3 lg:gap-[30px] md:gap-[20px] gap-10 max-w-[1000px] max-h-[1000px]"
+        className="grid lg:grid-cols-3 grid-cols-1 lg:p-0 p-8 md:grid-cols-3 lg:gap-[20px] md:gap-[15px] gap-10 max-w-[800px] max-h-[500px]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

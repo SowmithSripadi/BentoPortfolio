@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <motion.div
-        className="mt-10 lg:text-[50px] text-[60px] cursor-pointer text-center font-Tangerine lg:mb-[100px] md:mb-[100px] mb-10"
+        className="mt-10 lg:text-[35px] text-[40px] cursor-pointer text-center font-Tangerine mb-14"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

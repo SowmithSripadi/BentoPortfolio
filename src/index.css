@@ -15,8 +15,8 @@ html {
 
 /* Define default size for grid items */
 .grid-item {
-  min-width: 258px;
-  min-height: 202px;
+  /* min-width: 158px;
+  min-height: 82px; */
   border-radius: 50px;
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-out;
@@ -31,15 +31,15 @@ html {
 @media (max-width: 1024px) {
   /* For tablets, change size */
   .grid-item {
-    min-width: 200px;
-    min-height: 160px;
+    /* min-width: 100px;
+    min-height: 60px; */
   }
 }
 
 @media (max-width: 768px) {
   /* For mobile, change size */
   .grid-item {
-    min-width: 300px;
-    min-height: 270px;
+    min-width: 250px;
+    min-height: 220px;
   }
 }

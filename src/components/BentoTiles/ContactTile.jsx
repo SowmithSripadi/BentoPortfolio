@@ -7,6 +7,7 @@ import {
   FaGithub,
   FaGlobe,
 } from "react-icons/fa"; // Example icons from React Icons
+import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import { itemVariants } from "../../animation/animateVariants";
 
@@ -24,43 +25,41 @@ function ContactTile() {
       aria-label="Navigate to Contact"
       variants={itemVariants}
     >
-      <p className="font-Tangerine text-2xl tracking-wide mb-4">Contact</p>
+      <p className="font-Tangerine text-xl tracking-wide mb-2">Contact</p>
 
       <div className="space-y-2">
-        {/* Email */}
-        <div className="flex items-center">
-          <FaEnvelope className="text-red-500 mr-2" />
-          <a
-            href="mailto:sowmithsripadi1@gmail.com"
-            className="text-gray-700 hover:underline"
-          >
-            sowmithsripadi1@gmail.com
-          </a>
-        </div>
-
-        {/* LinkedIn */}
-        <div className="flex items-center">
-          <FaLinkedin className="text-blue-700 mr-2" />
-          <a
-            href="https://www.linkedin.com/in/sowmithsripadi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-700 hover:underline"
-          >
-            LinkedIn Profile
-          </a>
-        </div>
-
-        {/* GitHub */}
         <div className="flex items-center">
           <FaGithub className="text-gray-800 mr-2" />
           <a
             href="https://github.com/SowmithSripadi"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:underline"
+            className="text-gray-700 hover:underline text-sm"
           >
             GitHub Profile
+          </a>
+        </div>
+        <div className="flex items-center">
+          <FaLinkedin className="text-blue-700 mr-2" />
+          <a
+            href="https://www.linkedin.com/in/sowmithsripadi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:underline text-sm"
+          >
+            LinkedIn Profile
+          </a>
+        </div>
+
+        <div className="flex items-center">
+          <div>
+            <MdEmail className="mr-2" />
+          </div>
+          <a
+            href="mailto:sowmithsripadi1@gmail.com"
+            className="text-gray-700 hover:underline text-xs  "
+          >
+            sowmithsripadi1@gmail.com
           </a>
         </div>
       </div>

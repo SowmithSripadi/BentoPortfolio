@@ -10,7 +10,7 @@ function AboutTile() {
   };
   return (
     <motion.div
-      className="grid-item lg:row-span-2 md:row-span-2 bg-[#C6D8E5] p-8"
+      className="grid-item lg:row-span-2 md:row-span-2 bg-[#C6D8E5] p-8 "
       onClick={handleNavigate}
       variants={itemVariants}
       whileHover={{
@@ -19,34 +19,34 @@ function AboutTile() {
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add a deeper shadow
       }}
     >
-      <p className="font-Tangerine text-3xl tracking-wide">About</p>
-      <div className="flex flex-col lg:gap-8 gap-2 lg:mt-8 mt-2">
+      <p className="font-Tangerine text-xl tracking-wide">About</p>
+      <div className="flex flex-col lg:gap-8   gap-2 lg:mt-4">
         <div>
-          <span className="text-lg font-semibold">Full Stack Developer </span>
-          <p className="text-md text-gray-600 font-semibold">Sowmith Sripadi</p>
+          <span className="text-sm font-semibold">Full Stack Developer </span>
+          <p className="text-sm text-gray-600 font-semibold">Sowmith Sripadi</p>
         </div>
         <div>
-          <p className="text-lg hidden sm:block">
+          <p className="text-sm hidden sm:block">
             Florida International University
           </p>
-          <p className="text-lg sm:hidden">
+          <p className="text-sm sm:hidden">
             FIU{" "}
-            <span className="text-md text-gray-600">
+            <span className="text-sm text-gray-600">
               (Master's in Computer Science)
             </span>
           </p>
-          <span className="text-md text-gray-600 hidden sm:block">
+          <span className="text-sm text-gray-600 hidden sm:block">
             Master's in Computer Science
           </span>
         </div>
         <div>
-          <p className="text-lg hidden sm:block">MVSR</p>
-          <span className="text-md text-gray-600 hidden sm:block">
+          <p className="text-sm hidden sm:block">MVSR</p>
+          <span className="text-sm text-gray-600 hidden sm:block">
             Bachelor's in Computer Science and Engineering
           </span>
-          <p className="text-lg sm:hidden">
+          <p className="text-sm sm:hidden">
             MVSR{" "}
-            <span className="text-md text-gray-600">
+            <span className="text-sm text-gray-600">
               (Bachelor's in Computer Science and Engineering)
             </span>
           </p>
