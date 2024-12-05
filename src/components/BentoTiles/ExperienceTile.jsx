@@ -11,7 +11,7 @@ function ExperienceTile() {
   };
   return (
     <motion.div
-      className="grid-item lg:col-span-2 md:col-span-2 bg-[#D9E3B9] p-8"
+      className="grid-item lg:col-span-2 md:col-span-2 bg-lime p-8"
       onClick={handleNavigate}
       variants={itemVariants}
       whileHover={{
@@ -20,16 +20,16 @@ function ExperienceTile() {
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add a deeper shadow
       }}
     >
-      <p className="font-Tangerine text-xl tracking-wide mb-2">
+      <p className="font-Tangerine text-xl tracking-wide mb-2 text-green">
         Professional Experience
       </p>
 
-      <p className="text-sm">
-        <span className="font-semibold text-sm">Accenture</span> | Application
-        Development Associate
+      <p className="text-sm text-green">
+        <span className="font-semibold text-sm">Accenture</span> | Software
+        Engineer
       </p>
       <span className="text-sm text-gray-600">August 2021 - Dec 2022</span>
-      <p className="text-sm">
+      <p className="text-sm text-green">
         <span className="font-semibold text-sm">
           Florida International University
         </span>{" "}

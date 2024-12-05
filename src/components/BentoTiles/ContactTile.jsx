@@ -14,7 +14,7 @@ import { itemVariants } from "../../animation/animateVariants";
 function ContactTile() {
   return (
     <motion.div
-      className="grid-item bg-[#FEEDAE] p-8 cursor-pointer hover:bg-opacity-90 transition duration-300"
+      className="grid-item bg-yellow p-8 cursor-pointer hover:bg-opacity-90 transition duration-300"
       tabIndex="0"
       role="button"
       onKeyDown={(e) => {
@@ -25,7 +25,9 @@ function ContactTile() {
       aria-label="Navigate to Contact"
       variants={itemVariants}
     >
-      <p className="font-Tangerine text-xl tracking-wide mb-2">Contact</p>
+      <p className="font-Tangerine text-xl tracking-wide mb-2 text-darkBrown">
+        Contact
+      </p>
 
       <div className="space-y-2">
         <div className="flex items-center">
@@ -57,7 +59,7 @@ function ContactTile() {
           </div>
           <a
             href="mailto:sowmithsripadi1@gmail.com"
-            className="text-gray-700 hover:underline text-xs  "
+            className="text-gray-700 hover:underline text-sm   "
           >
             sowmithsripadi1@gmail.com
           </a>

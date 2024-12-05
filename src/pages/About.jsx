@@ -23,23 +23,23 @@ import ResumeButton from "../ui/ResumeButton";
 function About() {
   return (
     <motion.div
-      className="min-h-screen sm:py-16 py-8 px-4 sm:px-6 lg:px-8 relative"
+      className="min-h-screen md:py-16 py-8 px-4 sm:px-6 lg:px-8 md:px-14 relative"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="lg:text-[35px] text-2xl font-Tangerine text-center text-gray-800 sm:mb-[100px] mb-12 ">
+      <h1 className="lg:text-[35px] text-2xl font-Tangerine text-center text-gray-800 md:mb-[100px] mb-12 ">
         About Me
       </h1>
 
-      <div className="absolute left-[120px] top-0 h-full border-r-[1.5px] border-gray-300 sm:block hidden"></div>
+      <div className="absolute left-[120px] top-0 h-full border-r-[1.5px] border-gray-300 xl:block hidden"></div>
       <div className="max-w-[900px] mx-auto bg-white rounded-lg overflow-hidden ">
         <div className="md:flex items-start gap-16 mb-14">
           {/* Profile Image */}
           <div className="md:w-1/3 flex-shrink-0">
             <img
-              className="sm:h-full sm:w-full object-cover rounded-lg h-[300px] mx-auto sm:mb-0 mb-12"
-              src="../images/Potrait.jpg" // Replace with your image path
+              className="md:h-full md:w-full object-cover rounded-lg h-[300px] mx-auto md:mb-0 mb-12"
+              src="../images/Potrait.jpg"
               alt="Profile"
             />
           </div>
@@ -108,7 +108,7 @@ function About() {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <h2 className="text-xl font-semibold text-gray-800 mb-12">Skills</h2>
-          <ul className="list-none grid grid-cols-2 md:grid-cols-3  md:gap-x-[200px] gap-y-6 gap-x-12 ">
+          <ul className="list-none grid grid-cols-2 md:grid-cols-3  md:gap-x-[200px] gap-y-6 gap-x-14 ">
             <li className="flex items-center">
               <FaReact className="text-blue-500 mr-2" size={24} />
               React.js

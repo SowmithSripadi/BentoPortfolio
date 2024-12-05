@@ -13,7 +13,6 @@ html {
   overflow-y: scroll; /* Always show the vertical scrollbar */
 }
 
-/* Define default size for grid items */
 .grid-item {
   /* min-width: 158px;
   min-height: 82px; */
@@ -29,7 +28,7 @@ html {
 
 /* Responsive media queries */
 @media (max-width: 1024px) {
-  /* For tablets, change size */
+  /* For tablets*/
   .grid-item {
     /* min-width: 100px;
     min-height: 60px; */
@@ -37,9 +36,10 @@ html {
 }
 
 @media (max-width: 768px) {
-  /* For mobile, change size */
+  /* For mobile */
   .grid-item {
     min-width: 250px;
+    max-height: 300px;
     min-height: 220px;
   }
 }
