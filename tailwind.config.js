@@ -8,6 +8,10 @@ export default {
         Tangerine: ["Tangerine", "cursive"],
         OldStandardTT: ["Old Standard TT"],
       },
+      screens: {
+        miniPhones: "390px",
+        Phones: "430px",
+      },
       colors: {
         palatinate: "#51205B",
         wisteria: "#D4C8ED",
