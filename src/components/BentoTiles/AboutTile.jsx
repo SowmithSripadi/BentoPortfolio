@@ -10,7 +10,7 @@ function AboutTile() {
   };
   return (
     <motion.div
-      className="grid-item lg:row-span-2 md:row-span-2 bg-blue p-8 "
+      className="grid-item lg:row-span-2 md:row-span-2 bg-blue p-8  "
       onClick={handleNavigate}
       variants={itemVariants}
       whileHover={{
@@ -19,8 +19,10 @@ function AboutTile() {
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add a deeper shadow
       }}
     >
-      <p className="font-Tangerine text-xl tracking-wide text-indigo">About</p>
-      <div className="flex flex-col lg:gap-8   gap-2 lg:mt-4">
+      <p className="font-OldStandardTT text-xl tracking-wide text-indigo">
+        About
+      </p>
+      <div className="flex flex-col lg:gap-8  gap-2 lg:mt-4">
         <div>
           <span className="text-indigo text-sm font-semibold">
             Full Stack Developer{" "}

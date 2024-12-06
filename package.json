@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "framer-motion": "^11.11.17",
+    "imagekitio-react": "^4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",

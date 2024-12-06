@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import ImageSlider from "../components/ImageSlider.jsx";
+import { FaChevronDown } from "react-icons/fa";
+
+import ProjectTile from "../components/ProjectTile.jsx";
+import FeaturedProjectTile from "../components/FeaturedProjectTile.jsx";
 
 import {
   instaFoodImages,
@@ -9,30 +11,43 @@ import {
   tictactoe,
   passwordGenerator,
   currencyConverter,
+  socialCartImages,
+  triedAndTestedImages,
 } from "../config/imagesData.js";
 
 const projectDescriptions = {
-  Instafood: [
+  "Social Cart": [
+    "Real-Time Collaborative Shopping: Implemented a feature that allows two users to add items simultaneously to a shared cart, ensuring updates are reflected in real-time.",
+    "Live Chat Integration: Utilized Socket.io and Redux to enable users to communicate directly within the shared cart session, enhancing user engagement and coordination.",
+    "Optimized Data Storage: Leveraged MongoDB with Mongoose to store product data efficiently, including images, categories, and pricing, ensuring quick and streamlined data retrieval.",
+  ],
+  "Tried And Tested": [
+    "User-Driven Solutions: Developed a blogging platform enabling users to share and discover solutions to real-world problems.",
+    "AI-Generated Visuals: Integrated AI to dynamically generate images based on blog content, improving the visual appeal and context of posts.",
+    "Scalable Backend Architecture: Built RESTful APIs with a modular structure for enhanced scalability, maintainability, and future feature expansions.",
+    "Robust Middleware: Added middleware for request handling, user authentication, and data validation, strengthening security and maintaining application stability.",
+  ],
+  "Insta Food": [
     "Built a responsive food-ordering website using Vanilla HTML, CSS, and JavaScript, focusing on user-friendly design and seamless interaction.",
     "Optimized website performance by leveraging lightweight CSS techniques and compressing image assets, achieving faster load times and improved user retention.",
     "Leveraged pure JavaScript to build reusable components, streamlining development and enhancing code maintainability.",
   ],
-  Todo: [
+  "To do": [
     "To-Do List Application: Created a responsive web app allowing users to add, delete, and mark tasks as completed.",
     "Dark Mode Feature: Implemented a dark mode toggle using CSS variables and JavaScript for better user experience.",
     "Data Persistence: Used localStorage to save tasks, ensuring they remain available across browser sessions.",
   ],
-  TicTacToe: [
+  "Tic Tac Toe": [
     "Tic-Tac-Toe Game: Developed an interactive web application of the classic Tic-Tac-Toe game, allowing two players to compete by marking X and O on a 3x3 grid.",
     "Game Logic and Winning Conditions: Implemented dynamic game logic to handle player turns, detect winning combinations or a draw, and display corresponding messages with a restart option.",
     "Dark Mode Feature: Added a dark mode toggle using CSS variables and JavaScript to enhance user experience, along with responsive design for various screen sizes.",
   ],
-  PasswordGenerator: [
+  "Password Generator": [
     "Password Generator Application: Built a React application that generates random passwords, allowing users to create secure passwords easily.",
     "Customizable Features: Users can adjust the password length and choose to include numbers and special characters to meet different security requirements.",
     "Copy to Clipboard: Implemented functionality to copy the generated password directly to the clipboard for user convenience.",
   ],
-  CurrencyConverter: [
+  "Currency Converter": [
     "Currency Converter Application: Created a React application that allows users to convert amounts between different currencies by selecting the desired currencies and entering an amount.",
     "Real-Time Conversion: Implemented functionality to fetch current exchange rates, ensuring accurate and up-to-date conversion results for various currencies.",
     "Interactive Features: Added features like swapping currencies and disabling input fields for converted amounts to enhance user experience and prevent input errors.",
@@ -52,56 +67,29 @@ function ProjectsPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="lg:text-[35px] text-2xl font-Tangerine text-center text-gray-800 sm:mb-[60px] mb-10 ">
+      <h1 className="lg:text-[35px] text-2xl font-OldStandardTT text-center text-gray-800 sm:mb-[60px] mb-10">
         Projects
       </h1>
-      <div className="flex flex-col gap-8 ">
-        <div className="bg-gray-200 p-8 rounded-3xl">
-          <div className="flex flex-col">
-            <div className="font-Tangerine text-[1.6rem] mb-12 flex flex-col  gap-0 items-center">
-              <p>InstaFood</p>
-              <div className="flex gap-4">
-                <a
-                  href="https://instafoodorder.netlify.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline text-sm"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href="https://github.com/SowmithSripadi/Instafood"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline text-sm"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-
-            <div className="flex w-full justify-center md:gap-[70px] gap-4 flex-col lg:flex-row lg:mb-8">
-              <div className="lg:w-1/2 flex lg:justify-end w-full justify-center mx-auto lg:mx-0 ">
-                <div className="xl:w-[600px] md:w-[500px] md:h-[300px] w-[370px] h-[250px] pl-8">
-                  <ImageSlider images={instaFoodImages} />
-                </div>
-              </div>
-              <div className="lg:w-1/2 flex justify-center w-full">
-                <div className="lg:w-[600px] w-[400px] flex flex-col md:gap-6 gap-3 px-6 md:px-0 text-gray-700 list-inside">
-                  {projectDescriptions["Instafood"].map((desc, idx) => (
-                    <li key={idx}>{desc}</li>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-col gap-8 w-full">
+        {/* Main Project: InstaFood */}
+        <FeaturedProjectTile
+          name="Social Cart"
+          imageData={socialCartImages}
+          projectDescriptions={projectDescriptions}
+          githubLink={"https://github.com/SowmithSripadi/SocialCart"}
+        />
+        <FeaturedProjectTile
+          name="Tried And Tested"
+          imageData={triedAndTestedImages}
+          projectDescriptions={projectDescriptions}
+          githubLink={"https://github.com/SowmithSripadi/TriedandTested"}
+        />
 
         {/* Toggle Button */}
         <div className="flex justify-center my-8">
           <button
             onClick={toggleMiniProjects}
-            className="flex items-center text-blue-600 hover:scale-110 transition-all duration-300 text-md font-Tangerine bg-gray-300 p-3 rounded-lg"
+            className="flex items-center text-blue-600 transition-all duration-300 text-md font-OldStandardTT bg-gray-300 px-6 py-4 rounded-lg w-[210px]"
             aria-expanded={showMiniProjects}
             aria-controls="mini-projects-section"
           >
@@ -113,6 +101,7 @@ function ProjectsPage() {
             />
           </button>
         </div>
+
         {/* Mini Projects */}
         <AnimatePresence initial={false}>
           {showMiniProjects && (
@@ -123,180 +112,51 @@ function ProjectsPage() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="overflow-hidden grid md:grid-cols-2 grid-cols-1 w-full gap-4 md:p-8 p-4"
+              className="overflow-hidden grid md:grid-cols-2 grid-cols-1 w-full gap-4 md:p-8 p-4 gap-y-12 xl:px-40"
             >
-              <div className="">
-                <div className="flex flex-col">
-                  <div className="font-Tangerine text-[1.2rem] mb-4 flex flex-col  gap-0 items-center">
-                    <p>Todo App</p>
-                    <div className="flex gap-4">
-                      <a
-                        href="https://todoapp-darkmode.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        Live Demo
-                      </a>
-                      <a
-                        href="https://github.com/SowmithSripadi/TodoApp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        GitHub
-                      </a>
-                    </div>
-                  </div>
+              {/* Todo App */}
+              <ProjectTile
+                name="To do"
+                imageData={todoImages}
+                projectDescriptions={projectDescriptions}
+                demoLink={"https://todoapp-darkmode.netlify.app"}
+                githubLink={"https://github.com/SowmithSripadi/TodoApp"}
+              />
 
-                  <div className="flex flex-col w-full justify-center ">
-                    <div className=" flex justify-center mb-2">
-                      <div className="w-[450px] h-[250px] overflow-hidden">
-                        <ImageSlider images={todoImages} />
-                      </div>
-                    </div>
-                    <div className="md:p-6 p-2 pt-0 flex justify-center">
-                      <div className="w-[450px] flex flex-col gap-2 text-gray-700 list-inside justify-center">
-                        {projectDescriptions["Todo"].map((desc, idx) => (
-                          <li className="text-sm" key={idx}>
-                            {desc}
-                          </li>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="">
-                <div className="flex flex-col">
-                  <div className="font-Tangerine text-[1.2rem] mb-4 flex flex-col  gap-0 items-center">
-                    <p>Tic Tac Toe</p>
-                    <div className="flex gap-4">
-                      <a
-                        href="https://tictactoeminimal.netlify.app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        Live Demo
-                      </a>
-                      <a
-                        href="https://github.com/SowmithSripadi/Tic-Tac-Toe"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        GitHub
-                      </a>
-                    </div>
-                  </div>
+              {/* Tic Tac Toe */}
+              <ProjectTile
+                name="Tic Tac Toe"
+                imageData={tictactoe}
+                projectDescriptions={projectDescriptions}
+                demoLink={"https://tictactoeminimal.netlify.app"}
+                githubLink={"https://github.com/SowmithSripadi/Tic-Tac-Toe"}
+              />
 
-                  <div className="flex flex-col w-full justify-center ">
-                    <div className=" flex justify-center">
-                      <div className="w-[450px] h-[250px] overflow-hidden">
-                        <ImageSlider images={tictactoe} />
-                      </div>
-                    </div>
-                    <div className="md:p-6 p-2 pt-0 flex justify-center">
-                      <div className="w-[450px] flex flex-col gap-2 text-gray-700 list-inside justify-center">
-                        {projectDescriptions["TicTacToe"].map((desc, idx) => (
-                          <li className="text-sm" key={idx}>
-                            {desc}
-                          </li>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="">
-                <div className="flex flex-col">
-                  <div className="font-Tangerine text-[1.2rem] mb-4 flex flex-col  gap-0 items-center">
-                    <p>Password Generator</p>
-                    <div className="flex gap-4">
-                      <a
-                        href="https://passwordtextgenerator.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        Live Demo
-                      </a>
-                      <a
-                        href="https://github.com/SowmithSripadi/React-projects"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        GitHub
-                      </a>
-                    </div>
-                  </div>
+              {/* Password Generator */}
+              <ProjectTile
+                name="Password Generator"
+                imageData={passwordGenerator}
+                projectDescriptions={projectDescriptions}
+                demoLink={"https://passwordtextgenerator.netlify.app/"}
+                githubLink={"https://github.com/SowmithSripadi/React-projects"}
+              />
 
-                  <div className="flex flex-col w-full justify-center ">
-                    <div className=" flex justify-center">
-                      <div className="w-[450px] h-[250px] overflow-hidden">
-                        <ImageSlider images={passwordGenerator} />
-                      </div>
-                    </div>
-                    <div className="md:p-6 p-2 pt-0 flex justify-center">
-                      <div className="w-[450px] flex flex-col gap-2 text-gray-700 list-inside justify-center">
-                        {projectDescriptions["PasswordGenerator"].map(
-                          (desc, idx) => (
-                            <li className="text-sm" key={idx}>
-                              {desc}
-                            </li>
-                          )
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="">
-                <div className="flex flex-col">
-                  <div className="font-Tangerine text-[1.2rem] mb-4 flex flex-col  gap-0 items-center">
-                    <p>Currency Converterr</p>
-                    <div className="flex gap-4">
-                      <a
-                        href="https://currencyconvertermoney.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        Live Demo
-                      </a>
-                      <a
-                        href="https://github.com/SowmithSripadi/React-projects"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                      >
-                        GitHub
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col w-full justify-center ">
-                    <div className=" flex justify-center">
-                      <div className="w-[450px] h-[250px] overflow-hidden">
-                        <ImageSlider images={currencyConverter} />
-                      </div>
-                    </div>
-                    <div className="md:p-6 p-2 pt-0 flex justify-center">
-                      <div className="w-[450px] flex flex-col gap-2 text-gray-700 list-inside justify-center">
-                        {projectDescriptions["CurrencyConverter"].map(
-                          (desc, idx) => (
-                            <li className="text-sm" key={idx}>
-                              {desc}
-                            </li>
-                          )
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Currency Converter */}
+              <ProjectTile
+                name="Currency Converter"
+                imageData={currencyConverter}
+                projectDescriptions={projectDescriptions}
+                demoLink={"https://currencyconvertermoney.netlify.app"}
+                githubLink={"https://github.com/SowmithSripadi/React-projects"}
+              />
+              {/* Insta food web page */}
+              <ProjectTile
+                name="Insta Food"
+                imageData={instaFoodImages}
+                projectDescriptions={projectDescriptions}
+                demoLink={"https://instafoodorder.netlify.app/"}
+                githubLink={"https://github.com/SowmithSripadi/Instafood"}
+              />
             </motion.div>
           )}
         </AnimatePresence>

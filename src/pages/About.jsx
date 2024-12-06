@@ -19,6 +19,7 @@ import {
   SiTypescript,
 } from "react-icons/si"; // Example icons
 import ResumeButton from "../ui/ResumeButton";
+import Image from "../components/Image";
 
 function About() {
   return (
@@ -28,7 +29,7 @@ function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="lg:text-[35px] text-2xl font-Tangerine text-center text-gray-800 md:mb-[100px] mb-12 ">
+      <h1 className="lg:text-[35px] text-2xl font-OldStandardTT text-center text-gray-800 md:mb-[100px] mb-12 ">
         About Me
       </h1>
 
@@ -37,7 +38,7 @@ function About() {
         <div className="md:flex items-start gap-16 mb-14">
           {/* Profile Image */}
           <div className="md:w-1/3 flex-shrink-0">
-            <img
+            <Image
               className="md:h-full md:w-full object-cover rounded-lg h-[300px] mx-auto md:mb-0 mb-12"
               src="../images/Potrait.jpg"
               alt="Profile"

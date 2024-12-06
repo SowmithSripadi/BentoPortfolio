@@ -25,6 +25,9 @@ html {
   transform: translate(-10px, -10px);
   cursor: pointer;
 }
+.no-hover {
+  @apply transform-none cursor-default !important;
+}
 
 /* Responsive media queries */
 @media (max-width: 1024px) {

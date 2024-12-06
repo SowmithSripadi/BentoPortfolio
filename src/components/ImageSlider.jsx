@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import Image from "./Image";
 
 function ImageSlider({ images }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,7 +23,7 @@ function ImageSlider({ images }) {
       >
         {images.map((img, index) => (
           <div key={index} className="w-full flex-shrink-0">
-            <img
+            <Image
               src={img.src}
               alt={img.alt}
               className="w-full h-auto object-cover block"

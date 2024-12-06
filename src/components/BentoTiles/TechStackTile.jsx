@@ -21,10 +21,10 @@ import { itemVariants } from "../../animation/animateVariants";
 function TechStackTile() {
   return (
     <motion.div
-      className="grid-item bg-pink p-[18px] flex flex-col gap-4"
+      className="grid-item bg-pink p-[18px] flex flex-col gap-4 no-hover"
       variants={itemVariants}
     >
-      <p className="font-Tangerine text-xl tracking-wide text-center text-palatinateDark">
+      <p className="font-OldStandardTT text-xl tracking-wide text-center text-palatinateDark">
         Tech Stack
       </p>
 

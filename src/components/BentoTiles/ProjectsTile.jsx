@@ -28,7 +28,7 @@ function ProjectsTile() {
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add a deeper shadow
       }}
     >
-      <p className="font-Tangerine text-xl tracking-wide mb-2 text-palatinate">
+      <p className="font-OldStandardTT text-xl tracking-wide mb-2 text-palatinate">
         Projects
       </p>
 

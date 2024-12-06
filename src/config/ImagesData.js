@@ -1,3 +1,25 @@
+export const socialCartImages = [
+  {
+    src: "../../images/SocialCart/SocialCart1.png",
+    alt: "image 1 from SocialCart website project",
+  },
+  {
+    src: "../../images/SocialCart/SocialCart2.png",
+    alt: "image 2 from SocialCart website project",
+  },
+  {
+    src: "../../images/SocialCart/SocialCart3.png",
+    alt: "image 3 from SocialCart website project",
+  },
+];
+
+export const triedAndTestedImages = [
+  {
+    src: "../../images/TriedAndTested/ComingSoon.jpg",
+    alt: "Coming soon image",
+  },
+];
+
 export const instaFoodImages = [
   {
     src: "../../images/instafood/1.png",

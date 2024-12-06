@@ -37,7 +37,7 @@ function ExperiencePage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="text-[30px]  font-Tangerine text-center mb-12">
+      <h1 className="text-[30px]  font-OldStandardTT text-center mb-12">
         Experience
       </h1>
 

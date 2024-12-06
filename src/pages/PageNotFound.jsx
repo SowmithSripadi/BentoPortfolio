@@ -12,7 +12,7 @@ function PageNotFound() {
     >
       <RxCrossCircled className="text-6xl text-blue-500 mb-6 animate-pulse" />
       <motion.h1
-        className="text-4xl md:text-6xl font-Tangerine text-gray-800 mb-4"
+        className="text-4xl md:text-6xl font-OldStandardTT text-gray-800 mb-4"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}

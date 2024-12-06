@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ['"Red Hat Text"', "sans-serif"], // Make Red Hat Text the base font
         Tangerine: ["Tangerine", "cursive"],
+        OldStandardTT: ["Old Standard TT"],
       },
       colors: {
         palatinate: "#51205B",

@@ -10,28 +10,28 @@ function NavBar() {
         <div className="ml-auto flex  md:space-x-20 mt-10  md:mr-20 mr-10 space-x-12">
           <Link
             to="/"
-            className="cursor-pointer hover:text-gray-500 text-md font-Tangerine"
+            className="cursor-pointer hover:text-gray-500 text-[18px] font-OldStandardTT"
             aria-label="Navigate to Home"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="cursor-pointer hover:text-gray-500 text-md font-Tangerine"
+            className="cursor-pointer hover:text-gray-500 text-[18px] font-OldStandardTT"
             aria-label="Navigate to About"
           >
             About
           </Link>
           <Link
             to="/experience"
-            className="cursor-pointer hover:text-gray-500 text-md font-Tangerine"
+            className="cursor-pointer hover:text-gray-500 text-[18px] font-OldStandardTT"
             aria-label="Navigate to Experience"
           >
             Experience
           </Link>
           <Link
             to="/projects"
-            className="cursor-pointer hover:text-gray-500 text-md font-Tangerine"
+            className="cursor-pointer hover:text-gray-500 text-[18px] font-OldStandardTT"
             aria-label="Navigate to Projects"
           >
             Projects
