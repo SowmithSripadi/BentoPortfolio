@@ -43,7 +43,7 @@ function ExperiencePage() {
 
       <div className="flex flex-row mx-auto p-6 gap-10 justify-center">
         {/* Left Side: Icons and Connecting Lines */}
-        <div className="flex flex-col items-center md:gap-[384px] sm:gap-[430px] miniPhones:gap-[823px] Phones:gap-[670px]">
+        <div className="flex flex-col items-center md:gap-[384px] sm:gap-[430px] miniPhones:gap-[823px] Phones:gap-[670px] gap-[870px]">
           {experiences.map((exp, index) => (
             <div key={exp.id} className="flex flex-col items-center">
               {/* Icon Container */}
