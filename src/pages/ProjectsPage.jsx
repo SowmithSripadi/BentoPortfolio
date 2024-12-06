@@ -13,7 +13,7 @@ import {
   currencyConverter,
   socialCartImages,
   triedAndTestedImages,
-} from "../config/imagesData.js";
+} from "../config/ImagesData.js";
 
 const projectDescriptions = {
   "Social Cart": [
