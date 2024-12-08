@@ -14,7 +14,7 @@ import { itemVariants } from "../../animation/animateVariants";
 function ContactTile() {
   return (
     <motion.div
-      className="grid-item bg-yellow p-8 cursor-pointer hover:bg-opacity-90 transition duration-300 no-hover"
+      className="grid-item dark:bg-darkTileColor bg-yellow p-8 cursor-pointer hover:bg-opacity-90 transition duration-300 no-hover"
       tabIndex="0"
       role="button"
       onKeyDown={(e) => {
@@ -25,18 +25,18 @@ function ContactTile() {
       aria-label="Navigate to Contact"
       variants={itemVariants}
     >
-      <p className="font-OldStandardTT text-xl tracking-wide mb-2 text-darkBrown">
+      <p className="font-OldStandardTT text-xl tracking-wide mb-2 text-darkBrown dark:text-lightBrown">
         Contact
       </p>
 
       <div className="space-y-2">
         <div className="flex items-center">
-          <FaGithub className="text-gray-800 mr-2" />
+          <FaGithub className="text-gray-800 mr-2 dark:text-darkSecondaryText" />
           <a
             href="https://github.com/SowmithSripadi"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:underline text-sm"
+            className="text-gray-700 hover:underline text-sm dark:text-darkSecondaryText"
           >
             GitHub Profile
           </a>
@@ -47,7 +47,7 @@ function ContactTile() {
             href="https://www.linkedin.com/in/sowmithsripadi"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:underline text-sm"
+            className="text-gray-700 hover:underline text-sm dark:text-darkSecondaryText"
           >
             LinkedIn Profile
           </a>
@@ -59,7 +59,7 @@ function ContactTile() {
           </div>
           <a
             href="mailto:sowmithsripadi1@gmail.com"
-            className="text-gray-700 hover:underline text-sm   "
+            className="text-gray-700 hover:underline text-sm dark:text-darkSecondaryText"
           >
             sowmithsripadi1@gmail.com
           </a>

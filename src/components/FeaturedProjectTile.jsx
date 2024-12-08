@@ -10,7 +10,7 @@ function FeaturedProjectTile({
 }) {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col max-w-6xl border-4 rounded-3xl p-4 px-8">
+      <div className="flex flex-col max-w-6xl rounded-3xl p-4 px-12 bg-[#fafafa] dark:bg-darkTileColor shadow-md">
         <div className="font-OldStandardTT text-[1.6rem] mb-12 flex flex-col gap-0 items-center">
           <p>{name}</p>
           <div className="flex gap-4">
@@ -42,7 +42,7 @@ function FeaturedProjectTile({
           <div className="lg:w-1/2 flex justify-center w-full">
             <ul className="max-w-md w-full text-gray-700 list-disc list-outside space-y-2 leading-relaxed pl-8 text-justify">
               {projectDescriptions[name].map((desc, idx) => (
-                <li key={idx} className="">
+                <li key={idx} className="dark:text-darkSecondaryText">
                   {desc}
                 </li>
               ))}

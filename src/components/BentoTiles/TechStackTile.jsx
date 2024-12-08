@@ -21,10 +21,10 @@ import { itemVariants } from "../../animation/animateVariants";
 function TechStackTile() {
   return (
     <motion.div
-      className="grid-item bg-pink p-[18px] flex flex-col gap-4 no-hover"
+      className="grid-item bg-pink dark:bg-darkTileColor p-[18px]  flex flex-col gap-4 no-hover"
       variants={itemVariants}
     >
-      <p className="font-OldStandardTT text-xl tracking-wide text-center text-palatinateDark">
+      <p className="font-OldStandardTT text-xl tracking-wide text-center text-palatinateDark dark:text-palatinateLight">
         Tech Stack
       </p>
 
@@ -40,9 +40,8 @@ function TechStackTile() {
         />
         <SiExpress
           size={23}
-          color="#000000"
           title="Express.js"
-          className="transition-transform transform hover:scale-110"
+          className="transition-transform transform hover:scale-110 dark:text-white"
           aria-label="Express.js"
         />
         <FaReact
@@ -70,9 +69,8 @@ function TechStackTile() {
         />
         <SiMysql
           size={23}
-          color="#00758F"
           title="MySQL"
-          className="transition-transform transform hover:scale-110"
+          className="transition-transform transform hover:scale-110 dark:text-white text-[#00758F]"
           aria-label="MySQL"
         />
         <SiTailwindcss

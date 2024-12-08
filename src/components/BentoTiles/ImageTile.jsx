@@ -6,7 +6,7 @@ import Image from "../Image";
 function ImageTile() {
   return (
     <motion.div
-      className="grid-item overflow-hidden max-h-[228px] max-w-[320px] ml-auto mr-auto sm:ml-0 sm:mr-0 no-hover"
+      className="grid-item dark:bg-darkTileColor overflow-hidden max-h-[228px] max-w-[320px] ml-auto mr-auto sm:ml-0 sm:mr-0 no-hover"
       variants={itemVariants}
     >
       <Image

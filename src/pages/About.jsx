@@ -29,12 +29,12 @@ function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="lg:text-[35px] text-2xl font-OldStandardTT text-center text-gray-800 md:mb-[100px] mb-12 ">
+      <h1 className="lg:text-[35px] text-2xl font-OldStandardTT text-center text-gray-800 dark:text-darkPrimaryText md:mb-[100px] mb-12 ">
         About Me
       </h1>
 
       <div className="absolute left-[120px] top-0 h-full border-r-[1.5px] border-gray-300 xl:block hidden"></div>
-      <div className="max-w-[900px] mx-auto bg-white rounded-lg overflow-hidden ">
+      <div className="max-w-[900px] mx-auto bg-white dark:bg-[#121212] rounded-lg overflow-hidden ">
         <div className="md:flex items-start gap-16 mb-14">
           {/* Profile Image */}
           <div className="md:w-1/3 flex-shrink-0">
@@ -48,7 +48,7 @@ function About() {
           {/* Content Section */}
           <div className="md:w-2/3 md:p-8 md:pt-0 p-8 pb-0 ">
             <motion.p
-              className="text-md text-gray-700 mb-8"
+              className="text-md text-gray-700 dark:text-darkSecondaryText mb-8"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -61,7 +61,7 @@ function About() {
             </motion.p>
 
             <motion.div
-              className="text-md text-gray-700 mb-8"
+              className="text-md text-gray-700 dark:text-darkSecondaryText mb-8"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
@@ -87,7 +87,7 @@ function About() {
             </motion.div>
 
             <motion.p
-              className="text-md text-gray-700 mb-8"
+              className="text-md text-gray-700 dark:text-darkSecondaryText mb-8"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -108,7 +108,9 @@ function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <h2 className="text-xl font-semibold text-gray-800 mb-12">Skills</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-12 dark:text-darkPrimaryText">
+            Skills
+          </h2>
           <ul className="list-none grid grid-cols-2 md:grid-cols-3  md:gap-x-[200px] gap-y-6 gap-x-14 ">
             <li className="flex items-center">
               <FaReact className="text-blue-500 mr-2" size={24} />

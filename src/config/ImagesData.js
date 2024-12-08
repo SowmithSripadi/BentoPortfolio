@@ -20,6 +20,37 @@ export const triedAndTestedImages = [
   },
 ];
 
+export const bentoPortfolio = [
+  {
+    src: "../../images/bentoPortfolio/bento1.png",
+    alt: "bento portfolio image 1",
+  },
+  {
+    src: "../../images/bentoPortfolio/bento2.png",
+    alt: "bento portfolio image 2",
+  },
+  {
+    src: "../../images/bentoPortfolio/bento3.png",
+    alt: "bento portfolio image 3",
+  },
+  {
+    src: "../../images/bentoPortfolio/bento4.png",
+    alt: "bento portfolio image 4",
+  },
+  {
+    src: "../../images/bentoPortfolio/bento5.png",
+    alt: "bento portfolio image 5",
+  },
+  {
+    src: "../../images/bentoPortfolio/bento6.png",
+    alt: "bento portfolio image 6",
+  },
+  {
+    src: "../../images/bentoPortfolio/bento7.png",
+    alt: "bento portfolio image 7",
+  },
+];
+
 export const instaFoodImages = [
   {
     src: "../../images/instafood/1.png",

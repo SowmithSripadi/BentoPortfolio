@@ -9,7 +9,7 @@ function ProjectTile({
   githubLink,
 }) {
   return (
-    <div className="border-4 max-w-lg mx-auto p-6 px-10 rounded-3xl bg-white">
+    <div className="bg-[#fafafa] dark:bg-darkTileColor max-w-lg mx-auto p-6 px-10 rounded-3xl shadow-md">
       <div className="font-OldStandardTT text-[1.2rem] mb-4 flex flex-col gap-0 items-center">
         <p>{name}</p>
         <div className="flex gap-4">
@@ -38,7 +38,9 @@ function ProjectTile({
       </div>
       <ul className="max-w-sm w-full text-gray-700 list-disc list-outside text-justify space-y-2 leading-relaxed mx-auto text-sm mt-6 pl-2 ">
         {projectDescriptions[name].map((desc, idx) => (
-          <li key={idx}>{desc}</li>
+          <li key={idx} className="dark:text-darkSecondaryText">
+            {desc}
+          </li>
         ))}
       </ul>
     </div>

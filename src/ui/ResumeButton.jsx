@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 const ResumeButton = ({ name }) => {
@@ -31,8 +31,8 @@ const StyledWrapper = styled.div`
     --back_color: #e9ecff;
   }
   .type--C {
-    --line_color: #00135c;
-    --back_color: #defffa;
+    --line_color: #006d77;
+    --back_color: #edf6f9;
   }
   .button {
     position: relative;

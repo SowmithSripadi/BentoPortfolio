@@ -13,6 +13,7 @@ import {
   currencyConverter,
   socialCartImages,
   triedAndTestedImages,
+  bentoPortfolio,
 } from "../config/ImagesData.js";
 
 const projectDescriptions = {
@@ -52,6 +53,11 @@ const projectDescriptions = {
     "Real-Time Conversion: Implemented functionality to fetch current exchange rates, ensuring accurate and up-to-date conversion results for various currencies.",
     "Interactive Features: Added features like swapping currencies and disabling input fields for converted amounts to enhance user experience and prevent input errors.",
   ],
+  "Bento Portfolio": [
+    "Interactive UI/UX: Designed and developed a dynamic, responsive personal portfolio using React, Framer Motion, and Tailwind CSS, ensuring a modern and engaging user experience.",
+    "Modular Architecture: Followed a component-driven approach for building reusable UI elements, such as featured project tiles, navigation bars, and toggle buttons, optimizing maintainability and scalability.",
+    "Routing and Navigation: Integrated React Router to manage multi-page navigation, enabling a seamless transition between sections like Home, About, Projects, and Experience.",
+  ],
 };
 
 function ProjectsPage() {
@@ -67,7 +73,7 @@ function ProjectsPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="lg:text-[35px] text-2xl font-OldStandardTT text-center text-gray-800 sm:mb-[60px] mb-10">
+      <h1 className="lg:text-[35px] text-2xl font-OldStandardTT text-center text-gray-800 dark:text-darkPrimaryText sm:mb-[60px] mb-10">
         Projects
       </h1>
       <div className="flex flex-col gap-8 w-full">
@@ -89,7 +95,7 @@ function ProjectsPage() {
         <div className="flex justify-center my-8">
           <button
             onClick={toggleMiniProjects}
-            className="flex items-center text-blue-600 transition-all duration-300 text-md font-OldStandardTT bg-gray-300 px-6 py-4 rounded-lg w-[210px]"
+            className="flex items-center text-blue-600 transition-all duration-300 text-md font-OldStandardTT bg-gray-300 dark:bg-darkTileColor px-6 py-4 rounded-lg w-[210px]"
             aria-expanded={showMiniProjects}
             aria-controls="mini-projects-section"
           >
@@ -151,11 +157,11 @@ function ProjectsPage() {
               />
               {/* Insta food web page */}
               <ProjectTile
-                name="Insta Food"
-                imageData={instaFoodImages}
+                name="Bento Portfolio"
+                imageData={bentoPortfolio}
                 projectDescriptions={projectDescriptions}
-                demoLink={"https://instafoodorder.netlify.app/"}
-                githubLink={"https://github.com/SowmithSripadi/Instafood"}
+                demoLink={"https://sowmithsripadi.com"}
+                githubLink={"https://github.com/SowmithSripadi/BentoPortfolio"}
               />
             </motion.div>
           )}

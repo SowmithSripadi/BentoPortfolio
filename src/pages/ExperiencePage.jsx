@@ -61,7 +61,7 @@ function ExperiencePage() {
                 {/* Connecting Line */}
                 {index !== experiences.length && (
                   <motion.div
-                    className="absolute left-1/2 top-full transform -translate-x-1/2 w-px bg-gray-400"
+                    className="absolute left-1/2 top-full transform -translate-x-1/2 w-px bg-gray-400 "
                     initial={{ height: 0 }}
                     animate={{
                       height:
@@ -85,10 +85,14 @@ function ExperiencePage() {
             <div key={exp.id} className="flex flex-col">
               <h3 className="text-2xl font-semibold mb-2">{exp.title}</h3>
               <p className="text-xl text-blue-500 mb-1">{exp.company}</p>
-              <p className="text-gray-500 mb-4">{exp.duration}</p>
+              <p className="text-gray-500 mb-4 dark:text-darkSecondaryText">
+                {exp.duration}
+              </p>
               <ul className="list-disc list-inside space-y-2 text-gray-700">
                 {exp.responsibilities.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                  <li key={idx} className="dark:text-darkSecondaryText">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
