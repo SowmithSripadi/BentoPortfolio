@@ -4,14 +4,17 @@ This is a portfolio website inspired by bento design. Bento design finds inspira
 
 ---
 
-## Demo
-
-Screenshots and live demo links will be added soon.
-
----
-
 ## Tech Stack
 
 - **Frontend:** React, Tailwind CSS
 - **Build Tool:** Vite
+
+---
+
+## Screenshots
+
+![image alt](https://github.com/SowmithSripadi/BentoPortfolio/blob/main/HomeScreenshot.png?raw=true)
+
+
+
 
