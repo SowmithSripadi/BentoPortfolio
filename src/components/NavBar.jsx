@@ -35,6 +35,14 @@ function NavBar() {
     setIsChecked((prev) => !prev);
   };
 
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [open]);
+
   return (
     <header>
       <nav className="flex justify-end p-12 w-full">
