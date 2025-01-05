@@ -16,7 +16,7 @@ function ImageSlider({ images }) {
     });
   };
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full ">
       <div
         className="flex transition-transform duration-300"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -33,7 +33,7 @@ function ImageSlider({ images }) {
       </div>
       <button
         onClick={prevSlide}
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 hover:cursor-pointer"
+        className="absolute -left-3 top-1/2 transform -translate-y-1/2 hover:cursor-pointer"
         disabled={currentSlide === 0}
       >
         <FaAngleDoubleLeft
