@@ -32,13 +32,19 @@ function ExperienceTile() {
         August 2021 - Dec 2022
       </span>
       <p className="text-sm text-green dark:text-lightGreen">
+        <span className="font-semibold text-sm">Infor</span> | Software Engineer
+      </p>
+      <span className="text-sm text-gray-600 dark:text-darkSecondaryText">
+        June 2019 - August 2021
+      </span>
+      <p className="text-sm text-green dark:text-lightGreen">
         <span className="font-semibold text-sm">
           Florida International University
         </span>{" "}
         | Teaching Assistant
       </p>
       <span className="text-sm text-gray-600 dark:text-darkSecondaryText">
-        May 2021 - Present
+        May 2023 - Dec 2024
       </span>
     </motion.div>
   );

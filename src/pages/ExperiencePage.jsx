@@ -18,6 +18,19 @@ function ExperiencePage() {
     },
     {
       id: 2,
+      title: "Software Engineer",
+      company: "Infor",
+      duration: "June 2019 - August 2021",
+      responsibilities: [
+        "Developed and maintained RESTful APIs using Node.js and Express.js, improving data communication between systems and reducing server response times by 20%.",
+        "Optimized complex SQL queries and redesigned database schemas, achieving a 30% reduction in query execution time and enhancing application performance.",
+        "Built modular and reusable front-end components with React.js, reducing development time by 25% and improving scalability across multiple projects.",
+        "Collaborated with cross-functional teams, including UI/UX designers and QA engineers, to deliver secure and user-friendly web applications, increasing client satisfaction ratings by 15%.",
+        "Implemented robust authentication and data validation processes, ensuring compliance with security standards and reducing vulnerabilities by 25%.",
+      ],
+    },
+    {
+      id: 3,
       title: "Teaching Assistant",
       company: "Florida International University",
       duration: "May 2023 - December 2024",
@@ -43,42 +56,43 @@ function ExperiencePage() {
 
       <div className="flex flex-row mx-auto p-6 gap-10 justify-center">
         {/* Left Side: Icons and Connecting Lines */}
-        <div className="flex flex-col items-center md:gap-[384px] sm:gap-[430px] miniPhones:gap-[823px] Phones:gap-[670px] gap-[870px]">
-          {experiences.map((exp, index) => (
-            <div key={exp.id} className="flex flex-col items-center">
-              {/* Icon Container */}
-              <motion.div
-                className="relative flex flex-col items-center"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
-                {/* Icon */}
-                <div className="flex pt-1.5 justify-center bg-blue-500  rounded-full w-12 h-12 z-10 ">
-                  <IoLocationOutline size={30} />
-                </div>
+        {false && (
+          <div className="flex flex-col items-center md:gap-[384px] sm:gap-[430px] miniPhones:gap-[823px] Phones:gap-[670px] gap-[870px]">
+            {experiences.map((exp, index) => (
+              <div key={exp.id} className="flex flex-col items-center">
+                {/* Icon Container */}
+                <motion.div
+                  className="relative flex flex-col items-center"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  {/* Icon */}
+                  <div className="flex pt-1.5 justify-center bg-blue-500  rounded-full w-12 h-12 z-10 ">
+                    <IoLocationOutline size={30} />
+                  </div>
 
-                {/* Connecting Line */}
-                {index !== experiences.length && (
-                  <motion.div
-                    className="absolute left-1/2 top-full transform -translate-x-1/2 w-px bg-gray-400 "
-                    initial={{ height: 0 }}
-                    animate={{
-                      height:
-                        window.innerWidth < 400
-                          ? "400px"
-                          : window.innerWidth < 1024
-                          ? "12rem"
-                          : "12rem",
-                    }}
-                    transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-                  />
-                )}
-              </motion.div>
-            </div>
-          ))}
-        </div>
-
+                  {/* Connecting Line */}
+                  {index !== experiences.length && (
+                    <motion.div
+                      className="absolute left-1/2 top-full transform -translate-x-1/2 w-px bg-gray-400 "
+                      initial={{ height: 0 }}
+                      animate={{
+                        height:
+                          window.innerWidth < 400
+                            ? "400px"
+                            : window.innerWidth < 1024
+                            ? "12rem"
+                            : "12rem",
+                      }}
+                      transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+                    />
+                  )}
+                </motion.div>
+              </div>
+            ))}
+          </div>
+        )}
         {/* Right Side: Experience Details */}
         <div className="flex flex-col space-y-14 max-w-[600px]">
           {experiences.map((exp) => (
