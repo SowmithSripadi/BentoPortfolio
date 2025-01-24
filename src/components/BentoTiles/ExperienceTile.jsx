@@ -35,7 +35,7 @@ function ExperienceTile() {
         <span className="font-semibold text-sm">Infor</span> | Software Engineer
       </p>
       <span className="text-sm text-gray-600 dark:text-darkSecondaryText">
-        June 2019 - August 2021
+        July 2020 - August 2021
       </span>
       <p className="text-sm text-green dark:text-lightGreen">
         <span className="font-semibold text-sm">
