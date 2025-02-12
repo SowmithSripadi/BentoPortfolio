@@ -23,7 +23,15 @@ function ExperienceTile() {
       <p className="font-OldStandardTT text-xl tracking-wide mb-2 text-green dark:text-lightGreen">
         Professional Experience
       </p>
-
+      <p className="text-sm text-green dark:text-lightGreen">
+        <span className="font-semibold text-sm">
+          Florida International University
+        </span>{" "}
+        | Software Developer
+      </p>
+      <span className="text-sm text-gray-600 dark:text-darkSecondaryText">
+        May 2024 - Dec 2024
+      </span>
       <p className="text-sm text-green dark:text-lightGreen">
         <span className="font-semibold text-sm">Accenture</span> | Software
         Engineer
@@ -36,15 +44,6 @@ function ExperienceTile() {
       </p>
       <span className="text-sm text-gray-600 dark:text-darkSecondaryText">
         July 2020 - August 2021
-      </span>
-      <p className="text-sm text-green dark:text-lightGreen">
-        <span className="font-semibold text-sm">
-          Florida International University
-        </span>{" "}
-        | Teaching Assistant
-      </p>
-      <span className="text-sm text-gray-600 dark:text-darkSecondaryText">
-        May 2023 - Dec 2024
       </span>
     </motion.div>
   );

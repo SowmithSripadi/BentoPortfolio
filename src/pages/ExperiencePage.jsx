@@ -6,6 +6,17 @@ function ExperiencePage() {
   const experiences = [
     {
       id: 1,
+      title: "Software Developer",
+      company: "Florida International University",
+      duration: "May 2024 - December 2024",
+      responsibilities: [
+        "Optimized frontend API handling in React.js, improving real-time parking availability updates by efficiently fetching and processing third-party XML data.",
+        "Designed and enhanced the UI/UX for FIU’s parking dashboard, ensuring ADA compliance, mobile responsiveness, and intuitive real-time visualization using Tailwind CSS.",
+        "Assisted in backend API integration, working on fetching and mapping real-time data from FIU’s parking sensors into a structured format for frontend display. ",
+      ],
+    },
+    {
+      id: 2,
       title: "Software Engineer",
       company: "Accenture",
       duration: "August 2021 - December 2022",
@@ -18,7 +29,7 @@ function ExperiencePage() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "Software Engineer",
       company: "Infor",
       duration: "July 2020 - August 2021",
@@ -27,16 +38,6 @@ function ExperiencePage() {
         "Tuned complex SQL queries by optimizing indexing and schema design, achieving a 30% reduction in database query execution time.",
         "Developed modular front-end features with React.js, reducing onboarding time for new developers by 20% and enhancing application scalability.",
         "Partnered with designers and backend engineers to create secure and responsive web applications, leading to a 15% increase in client satisfaction ratings.",
-      ],
-    },
-    {
-      id: 3,
-      title: "Teaching Assistant",
-      company: "Florida International University",
-      duration: "May 2023 - December 2024",
-      responsibilities: [
-        "Created supplementary instructional materials and interactive modules, improving student engagement and comprehension by 25%.",
-        "Guided undergraduate students through advanced coursework and practical applications, leading to a 30% improvement in midterm assessment scores.",
       ],
     },
   ];
